@@ -1,3 +1,5 @@
+// A single line comment
+
 console.log(100);
 
 console.log('Hello World!');
