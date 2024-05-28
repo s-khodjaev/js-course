@@ -1,10 +1,10 @@
 // A single line comment
 
-console.log(100);
+/* console.log(100);
 
 console.log('Hello World!');
 
-console.log(20, 'Hello', true);
+console.log(20, 'Hello', true);*/
 
 const x = 100;
 
