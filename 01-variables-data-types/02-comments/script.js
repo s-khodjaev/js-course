@@ -26,3 +26,8 @@ const styles =
   'padding: 20px; background-color: white; color: red; font-weight: bold';
 
 console.log('%cHello World', styles);
+
+// Command + Shift + L - to select all highlighted text and change right away
+// Command + Shift + O - search
+// Command + B - toggle sidebar
+// Control + ~ - toggle terminal
