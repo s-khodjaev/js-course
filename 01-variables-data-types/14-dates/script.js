@@ -22,6 +22,6 @@ x = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 
 x = Intl.DateTimeFormat('default', { month: 'long' }).format(d);
 
-x = d.toLocaleString('default');
+x = Intl.DateTimeFormat('default', { month: 'short' }).format(d);
 
 console.log(x);
