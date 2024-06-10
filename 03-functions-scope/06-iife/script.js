@@ -11,3 +11,8 @@
 (function (name) {
   console.log('Hello ' + name);
 })('Brad');
+
+// Arrow functions
+(() => {
+  console.log('Hello from IIFE');
+})();
