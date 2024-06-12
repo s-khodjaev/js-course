@@ -121,53 +121,107 @@
 
 // console.log(doubledNumbers);
 
-const companies = [
-  { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
-  { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
-  { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
-  { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
-  { name: 'Company Five', category: 'Technology', start: 2009, end: 2014 },
-  { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
-  { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
-  { name: 'Company Eight', category: 'Technology', start: 2011, end: 2016 },
-  { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 },
-];
+// const companies = [
+//   { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+//   { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
+//   { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
+//   { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
+//   { name: 'Company Five', category: 'Technology', start: 2009, end: 2014 },
+//   { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
+//   { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
+//   { name: 'Company Eight', category: 'Technology', start: 2011, end: 2016 },
+//   { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 },
+// ];
 
-// Create an array of company names
-const companyNames = companies.map((company) => company.name);
-console.log(companyNames);
+// // Create an array of company names
+// const companyNames = companies.map((company) => company.name);
+// console.log(companyNames);
 
-// Create an array with just company and category
-// Version 1
-// const companyInfo = companies.map(
-//   (company) => company.name + ' ' + company.category
-// );
+// // Create an array with just company and category
+// // Version 1
+// // const companyInfo = companies.map(
+// //   (company) => company.name + ' ' + company.category
+// // );
+// // console.log(companyInfo);
+
+// // Version 2
+// const companyInfo = companies.map((company) => {
+//   return {
+//     name: company.name,
+//     category: company.category,
+//   };
+// });
+
 // console.log(companyInfo);
 
-// Version 2
-const companyInfo = companies.map((company) => {
-  return {
-    name: company.name,
-    category: company.category,
-  };
-});
+// // Create an array of objects with the name and the length of the company in years
+// const companyYears = companies.map((company) => {
+//   return {
+//     name: company.name,
+//     length: company.end - company.start + ' years',
+//   };
+// });
 
-console.log(companyInfo);
+// console.log(companyYears);
 
-// Create an array of objects with the name and the length of the company in years
-const companyYears = companies.map((company) => {
-  return {
-    name: company.name,
-    length: company.end - company.start + ' years',
-  };
-});
+// // Chain map methods
+// const numbers = [1, 2, 3, 4, 5];
 
-console.log(companyYears);
+// const squareAndDouble = numbers
+//   .map((number) => Math.sqrt(number))
+//   .map((sqrt) => sqrt * 2);
+// console.log(squareAndDouble);
 
-// Chain map methods
-const numbers = [1, 2, 3, 4, 5];
+// // Chaining different methods
+// const evenDouble = numbers
+//   .filter((number) => number % 2 === 0)
+//   .map((number) => number * 2);
 
-const squareAndDouble = numbers
-  .map((number) => Math.sqrt(number))
-  .map((sqrt) => sqrt * 2);
-console.log(squareAndDouble);
+// console.log(evenDouble);
+
+// Reduce method
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+const sum = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+
+// Shorter version
+const sum2 = numbers.reduce((acc, cur) => acc + cur, 0);
+
+console.log(sum2);
+
+// Using a for loop
+const sum3 = () => {
+  let acc = 0;
+  for (const cur of numbers) {
+    acc += cur;
+  }
+
+  console.log(sum3());
+};
+
+const cart = [
+  {
+    id: 1,
+    name: 'Product 1',
+    price: 130,
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: 200,
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: 300,
+  },
+];
+
+const totalPrice = cart.reduce(function (acc, product) {
+  return acc + product.price;
+}, 0);
+
+console.log(totalPrice);
