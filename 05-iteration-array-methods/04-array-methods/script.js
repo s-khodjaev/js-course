@@ -225,3 +225,12 @@ const totalPrice = cart.reduce(function (acc, product) {
 }, 0);
 
 console.log(totalPrice);
+
+const youngPeople = people
+  .filter((person) => person.age <= 25)
+  .map((person) => ({
+    name: person.firstName + ' ' + person.lastName,
+    email: person.email,
+  }));
+
+console.log(youngPeople);
